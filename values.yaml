@@ -3,9 +3,6 @@
 # The Application Name
 appname: weatherapp
 
-# The Namespace in which the app will be deployed
-namespace: default
-
 # The Amount of replicas we want for our application
 ReplicaCount: 3
 

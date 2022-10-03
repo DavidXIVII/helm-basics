@@ -20,5 +20,5 @@ service:
 
 # Details About the ingress (note you will need an ingress controller to serve paths on your host)
 ingress:
-  path: /
+  #path: /
   pathType: Prefix

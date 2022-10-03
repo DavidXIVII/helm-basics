@@ -1,5 +1,4 @@
-# Config map to work around argoCD stuck with Progressing App Health status due to deploying an ingress on AWS
-
+{{- if .Values.argoCD.enabled }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -10,8 +9,10 @@ metadata:
     app.kubernetes.io/part-of: argocd
 data:
   resource.customizations: |
-    networking.k8s.io/Ingress:
+    networking.k8s.io/Ingress:  
         health.lua: |
           hs = {}
           hs.status = "Healthy"
           return hs
+{{- end }}
+

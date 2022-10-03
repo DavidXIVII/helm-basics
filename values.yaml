@@ -22,3 +22,7 @@ service:
 ingress:
   path: /
   pathType: Prefix
+
+# ArgoCD Deployment
+argoCD:
+  enabled: true

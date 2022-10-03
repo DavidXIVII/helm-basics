@@ -1,5 +1,5 @@
 apiVersion: v2
-name: weather-app
+name: Weather-App
 description: A Helm chart for Kubernetes to deploy my Weather App
 
 # A chart can be either an 'application' or a 'library' chart.

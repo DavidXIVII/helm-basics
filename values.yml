@@ -1,0 +1,27 @@
+# Deployment Of The Weather-app
+
+# The Application Name
+appname: weatherapp
+
+# The Namespace in which the app will be deployed
+namespace: default
+
+# The Amount of replicas we want for our application
+ReplicaCount: 3
+
+# Details about the image we would like to pull, its repo and the version of it.
+image:
+  repo: docker.io/davideden/myapp
+  tag: 1.1
+  pullPolicy: IfNotPresent
+
+# Details about the service, its type, the port to listen to, the target port of the application.
+service:
+  type: LoadBalancer
+  port: 8080
+  targetPort: 5000
+
+# Details About the ingress (note you will need an ingress controller to serve paths on your host)
+ingress:
+  path: /
+  pathType: Prefix

@@ -1,4 +1,4 @@
-# Deployment Of The Weather-app
+# Values file, make sure to read each comment in order to set the correct values in each variable.
 
 # The Application Name
 appname: weatherapp
@@ -13,16 +13,19 @@ image:
   pullPolicy: IfNotPresent
 
 # Details about the service, its type, the port to listen to, the target port of the application.
+# Read more on service types: https://kubernetes.io/docs/concepts/services-networking/service/
 service:
   type: LoadBalancer
   port: 8080
   targetPort: 5000
 
-# Details About the ingress (note you will need an ingress controller to serve paths on your host)
+# Details about the ingress (note you will need an ingress controller to serve paths on your host)
+# Read more on ingress: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ingress:
   path: /
   pathType: Prefix
 
 # ArgoCD Deployment
+# If you are deploying the program to ArgoCD and using LoadBalancer this variable should be set to true.
 argoCD:
   enabled: true

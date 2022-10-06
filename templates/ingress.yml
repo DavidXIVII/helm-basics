@@ -1,3 +1,8 @@
+# Ingress template resource for serving the application
+# Ingress resource can only be deployed with LoadBalancer provisioned for it
+# Flow Control Is WIP
+
+#{{ if eq .Values.service.type "LoadBalancer" }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -15,3 +20,4 @@ spec:
             name: {{ .Values.appname }}-service
             port:
               number: {{ .Values.service.port }}
+#{{ end }}

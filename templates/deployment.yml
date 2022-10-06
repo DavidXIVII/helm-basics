@@ -1,3 +1,5 @@
+# Deployment template
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,4 +20,4 @@ spec:
       - name: {{ .Values.appname }}
         image: {{ .Values.image.repo }}:{{ .Values.image.tag }}
         ports:
-        - containerPort: 5000
+        - containerPort: {{ .Values.service.targetPort }}

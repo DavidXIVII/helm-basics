@@ -17,5 +17,8 @@ Edit the values.yaml with the parameters you would like to set.
 Each field includes details of the parameters and the values that can be used (most of them are pretty much obvious)
 
 ## Todo
-This README file will be edited soon as I will update and maintain the code.
-Fixed GPG Signature, Now every published commit will be signed.
+[*] More reliable and easy to use code.
+
+
+## Done
+[*] Added GPG Signature for verified Commits.

@@ -4,6 +4,7 @@
 
 This repo was made in order to start learning the usage of Helm, Charts and make revisions to my application
 with quick deployment into Kubernetes.
+</div> 
 
 ## Requirements
 * [Kubernetes](https://kubernetes.io/)
@@ -11,10 +12,10 @@ with quick deployment into Kubernetes.
 * [HELM](https://helm.sh/)
 
 ## Usage
-Edit the values.yaml with the parameters you would like to set, the filed includes detailed explanation regarding each
-element.
+Edit the values.yaml with the parameters you would like to set.
+<br>
+Each field includes details of the parameters and the values that can be used (most of them are pretty much obvious)
 
 ## Todo
 This README file will be edited soon as I will update and maintain the code.
 Fixed GPG Signature, Now every published commit will be signed.
-</div> 

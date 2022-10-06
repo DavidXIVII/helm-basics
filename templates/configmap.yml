@@ -1,4 +1,7 @@
 {{- if .Values.argoCD.enabled }}
+# This configmap prevent the endless Progression health check for the LoadBalancer in argoCD
+# issue: https://github.com/argoproj/argo-cd/issues/1704
+
 apiVersion: v1
 kind: ConfigMap
 metadata:
